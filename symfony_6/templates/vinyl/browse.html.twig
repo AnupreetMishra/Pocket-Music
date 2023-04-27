@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <h1>Browse Vinyl Mixes</h1>
+
+    <h2 class="mt-5 mb-4">Filter by Genre</h2>                            <a class="nav-link" style="margin-top: 20px;" href="#">Browse Mixes</a>
+    set path for browse page 
+    <ul class="genre-list ps-0 mt-2 mb-3">
+        <li class="d-inline">
+            <a class="btn btn-primary btn-sm" href="#">Pop</a>
+        </li>
+        <li class="d-inline">
+            <a class="btn btn-primary btn-sm" href="\browse">Rock</a>
+        </li>
+        <li class="d-inline">
+            <a class="btn btn-primary btn-sm" href="#">Heavy Metal</a>
+        </li>
+    </ul>
+
+    <div>
+        <h2 class="mt-5">Mixes</h2>                            <a class="nav-link" style="margin-top: 20px;" href="#">Browse Mixes</a>
+        set path for browse page 
+        <div class="row">
+            {% for mix in mixes %}
+            <div class="col col-md-4">
+                <a 
+                
+                   href="{{ path('app_mix_show', {
+                    slug:mix.slug
+                   })}}"
+                    class="mixed-vinyl-container p-3 text-center">
+                    <img src="{{ mix.imageUrl(300) }}"  alt="Mix Album Cover">
+                    <p class="mt-2"><strong>{{ mix.title }}</strong></p>
+                    <span>{{ mix.trackCount }} Tracks</span>
+                    | 
+                    <span>{{ mix.genre }}</span>
+                    |
+                    <span>{{ mix.createdAt|ago }}</span>
+                    <br>
+                    {{ mix.votesString }} votes
+                </a>
+            </div> 
+            {% endfor %}
+            
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
