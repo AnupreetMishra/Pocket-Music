@@ -32,6 +32,17 @@
                 </button>
                 <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
+
+                        {% if is_granted('ROLE_ADMIN') %}
+
+                        <li class="nav-item">
+                            <a class="nav-link" style="margin-top: 20px;" href="{{ path('admin') }}">Admin</a>
+                        </li>
+                        
+                        {% endif %}
+
+
+
                         <li class="nav-item">
                             <a class="nav-link" style="margin-top: 20px;" href="/browse">Browse Mixes</a>
                         </li>

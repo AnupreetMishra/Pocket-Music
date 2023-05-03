@@ -75,7 +75,7 @@ class VinylController extends AbstractController
     {
 
         return $this->render('vinyl/showpage.html.twig',[
-            'title' => 'Welcome to Mishra Travels',
+            'title' => 'Welcome Bose DK',
         ]);
     }
 }
