@@ -7,6 +7,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class VinylMixCrudController extends AbstractCrudController
@@ -28,7 +29,7 @@ class VinylMixCrudController extends AbstractCrudController
         yield IdField::new('id')
              ->onlyOnIndex();
         yield TextField::new('title');
-        yield Field::new('description')
+        yield TextEditorField::new('description')
             ->hideOnIndex();
   
         yield IntegerField::new('votes','Total Votes')
