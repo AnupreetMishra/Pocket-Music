@@ -51,6 +51,18 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    public function getRole(): ?string
+    {
+        return $this->roles;
+    }
+
+    public function setRole(string $roles): self
+    {
+        $this->username = $roles;
+
+        return $this;
+    }
+
     /**
      * A visual identifier that represents this user.
      *
@@ -58,7 +70,7 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
-        return (string) $this->email;
+        return (string) $this->username;
     }
 
     /**

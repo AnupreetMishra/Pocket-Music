@@ -1,3 +1,31 @@
-/* body {
-    background-color: grey;
+/* body{
+    background-image: url('/public/pngbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black !important;
+    background-color: white;
+
+}
+.content-header{
+    background: none;
 } */
+/* .col-6{
+    text-align: center;
+    margin: 205px 0 0 434px;
+} */
+/* .sidebar {
+
+    background-color: initial;
+}
+.sidebar a{
+    color: black !important;
+}
+.title{
+    color: black ;
+
+}
+.markdown-preview {
+    margin-top: 10px;
+    border: 2px dashed #da3735;
+    padding: 5px;
+} */ 

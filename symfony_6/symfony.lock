@@ -225,6 +225,9 @@
             "config/packages/uid.yaml"
         ]
     },
+    "symfony/ux-chartjs": {
+        "version": "v2.8.0"
+    },
     "symfony/ux-turbo": {
         "version": "v2.7.1"
     },

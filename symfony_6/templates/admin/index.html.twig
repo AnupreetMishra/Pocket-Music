@@ -1,2 +1,17 @@
+{# {% extends '@EasyAdmin/page/content.html.twig' %} #}
+
 {% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title %}
+        Pocket Music Dashboard
+{% endblock %}
+
+{% block main %}
+    
+        <div>
+                {{ render_chart(chart) }}
+        </div>
+{% endblock %}
+
+       
 

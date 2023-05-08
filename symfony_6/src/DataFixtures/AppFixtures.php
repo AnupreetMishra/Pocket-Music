@@ -48,18 +48,18 @@ class AppFixtures extends Fixture
             ])
             ->create();
 
-        // Load Topics
-        TopicFactory::new()->createMany(5);
+        // // Load Topics
+        // TopicFactory::new()->createMany(5);
 
-        // Load Questions
-        QuestionFactory::new()->createMany(20);
+        // // Load Questions
+        // QuestionFactory::new()->createMany(20);
 
-        QuestionFactory::new()
-            ->unpublished()
-            ->createMany(5);
+        // QuestionFactory::new()
+        //     ->unpublished()
+        //     ->createMany(5);
 
-        // Load Answers
-        AnswerFactory::new()->createMany(100);
+        // // Load Answers
+        // AnswerFactory::new()->createMany(100);
 
         $manager->flush();
     }
